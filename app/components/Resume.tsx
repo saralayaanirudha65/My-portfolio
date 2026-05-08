@@ -2,58 +2,64 @@
 import React, { useState } from 'react';
 
 /* ─── DATA ───────────────────────────────────────────────── */
-const EDUCATION = [
+interface EducationItem {
+  degree:      string;
+  institution: string;
+  period:      string;
+  grade?:      string;
+  highlights:  string[];
+}
+
+const EDUCATION: EducationItem[] = [
   {
     degree:      'B.Tech – Computer Communication Engineering',
     institution: 'Manipal Institute of Technology (MIT Manipal)',
     period:      '2022 – 2026',
-    // grade:       'CGPA: — / 10',            // fill in
     highlights:  ['Current Intern at Indivillage Tech Solutions','Project: AI-based Traffic Prediction', 'Coursework: DSA, DBMS, OS, Networks, ML'],
   },
-  
 ];
 
 const EXPERIENCE = [
   {
-    role:        'Software Engineering Intern',         // fill in role
-    company:     'Indivillage Tech Solutions',                        // fill in
-    period:      '01/26 – 05/26',             // fill in
-    type:        'Internship',
-    bullets:     [
+    role: 'Software Engineering Intern',         // fill in role
+    company: 'Indivillage Tech Solutions',                        // fill in
+    period: '01/26 – 05/26',             // fill in
+    type: 'Internship',
+    bullets: [
       'Developed Full stack web application for us clients',
       'Used Next.js,Node.js,builder.io,rest api,Tailwind css',
-      
+
     ],
   },
 ];
 
 const CERTIFICATIONS = [
-  { name: 'Introduction to Python Programming',           issuer: 'Microsoft,coursera', year: '2025' },
-  { name: 'Deep Learning ',         issuer: 'AndrewNG,coursera',      year: '2025' },
-  { name: 'Frontend', issuer: 'Meta,coursera',     year: '2025' },
+  { name: 'Introduction to Python Programming', issuer: 'Microsoft,coursera', year: '2025' },
+  { name: 'Deep Learning ', issuer: 'AndrewNG,coursera', year: '2025' },
+  { name: 'Frontend', issuer: 'Meta,coursera', year: '2025' },
 ];
 
 const ACHIEVEMENTS = [
   'Developed Traffic Prediction model with 91%+ accuracy using CNNs and geospatial data.',
-  
+
   'Active GitHub contributor — see github.com/saralayaanirudha65.',
 ];
 
 /* ─── COMPONENT ──────────────────────────────────────────── */
 const SectionLabel = ({ children }: { children: React.ReactNode }) => (
   <div style={{
-    display:      'flex',
-    alignItems:   'center',
-    gap:          '1rem',
+    display: 'flex',
+    alignItems: 'center',
+    gap: '1rem',
     marginBottom: '1.75rem',
   }}>
     <h3 style={{
-      fontSize:      '0.75rem',
-      fontWeight:    700,
+      fontSize: '0.75rem',
+      fontWeight: 700,
       letterSpacing: '0.15em',
       textTransform: 'uppercase',
-      color:         'var(--accent-dark)',
-      whiteSpace:    'nowrap',
+      color: 'var(--accent-dark)',
+      whiteSpace: 'nowrap',
     }}>{children}</h3>
     <div style={{ flex: 1, height: '1px', background: 'var(--border)' }} />
   </div>
@@ -68,21 +74,21 @@ export default function Resume() {
 
         {/* Top bar */}
         <div style={{
-          display:        'flex',
-          flexWrap:       'wrap',
-          gap:            '1.5rem',
+          display: 'flex',
+          flexWrap: 'wrap',
+          gap: '1.5rem',
           justifyContent: 'space-between',
-          alignItems:     'flex-end',
-          marginBottom:   '4rem',
+          alignItems: 'flex-end',
+          marginBottom: '4rem',
         }}>
           <div>
             <span className="badge" style={{ marginBottom: '1rem' }}>Curriculum Vitae</span>
             <h2 style={{
-              fontSize:      'clamp(2rem, 4vw, 3rem)',
-              fontWeight:    800,
+              fontSize: 'clamp(2rem, 4vw, 3rem)',
+              fontWeight: 800,
               letterSpacing: '-0.02em',
-              color:         'var(--ink)',
-              lineHeight:    1.1,
+              color: 'var(--ink)',
+              lineHeight: 1.1,
             }}>
               My Resume
             </h2>
@@ -93,25 +99,25 @@ export default function Resume() {
             href="/Anirudha_Saralaya_Resume.pdf"          /* place your PDF in /public/resume.pdf */
             download
             style={{
-              display:        'inline-flex',
-              alignItems:     'center',
-              gap:            '8px',
-              padding:        '12px 24px',
-              borderRadius:   '12px',
-              background:     hover ? 'var(--accent-dark)' : 'var(--accent)',
-              color:          '#fff',
-              fontWeight:     700,
-              fontSize:       '14px',
+              display: 'inline-flex',
+              alignItems: 'center',
+              gap: '8px',
+              padding: '12px 24px',
+              borderRadius: '12px',
+              background: hover ? 'var(--accent-dark)' : 'var(--accent)',
+              color: '#fff',
+              fontWeight: 700,
+              fontSize: '14px',
               textDecoration: 'none',
-              transition:     'background 0.2s, transform 0.15s',
-              transform:      hover ? 'translateY(-2px)' : 'none',
-              boxShadow:      '0 4px 14px rgba(16,185,129,0.3)',
+              transition: 'background 0.2s, transform 0.15s',
+              transform: hover ? 'translateY(-2px)' : 'none',
+              boxShadow: '0 4px 14px rgba(16,185,129,0.3)',
             }}
             onMouseEnter={() => setHover(true)}
             onMouseLeave={() => setHover(false)}
           >
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-              <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/>
+              <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3" />
             </svg>
             Download PDF
           </a>
@@ -119,10 +125,10 @@ export default function Resume() {
 
         {/* ── Two-column layout ── */}
         <div style={{
-          display:             'grid',
+          display: 'grid',
           gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 520px), 1fr))',
-          gap:                 '3rem',
-          alignItems:          'start',
+          gap: '3rem',
+          alignItems: 'start',
         }}>
 
           {/* ── LEFT COLUMN ── */}
@@ -136,9 +142,11 @@ export default function Resume() {
                     <span style={{ fontSize: '13px', fontWeight: 700, color: 'var(--accent-dark)', letterSpacing: '0.05em' }}>
                       {ed.period}
                     </span>
-                    <span style={{ fontSize: '12px', fontWeight: 600, color: 'var(--ink-muted)', background: 'var(--accent-light)', padding: '2px 10px', borderRadius: '99px' }}>
-                      {ed.grade}
-                    </span>
+                    {ed.grade && (
+                      <span style={{ fontSize: '12px', fontWeight: 600, color: 'var(--ink-muted)', background: 'var(--accent-light)', padding: '2px 10px', borderRadius: '99px' }}>
+                        {ed.grade}
+                      </span>
+                    )}
                   </div>
                   <h4 style={{ fontSize: '1.05rem', fontWeight: 700, color: 'var(--ink)', marginBottom: '0.25rem' }}>
                     {ed.degree}
@@ -216,10 +224,10 @@ export default function Resume() {
               {CERTIFICATIONS.map((cert, i) => (
                 <div key={i} className="glass" style={{
                   borderRadius: '14px',
-                  padding:      '1rem 1.25rem',
-                  display:      'flex',
-                  alignItems:   'center',
-                  gap:          '12px',
+                  padding: '1rem 1.25rem',
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '12px',
                 }}>
                   <div style={{
                     width: '36px', height: '36px', borderRadius: '10px',
@@ -228,7 +236,7 @@ export default function Resume() {
                     flexShrink: 0,
                   }}>
                     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--accent-dark)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                      <circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/>
+                      <circle cx="12" cy="8" r="6" /><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11" />
                     </svg>
                   </div>
                   <div style={{ flex: 1 }}>
@@ -242,7 +250,7 @@ export default function Resume() {
         </div>
 
         {/* Bottom note */}
-        
+
       </div>
     </section>
   );

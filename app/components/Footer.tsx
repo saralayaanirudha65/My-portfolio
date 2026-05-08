@@ -14,7 +14,7 @@ export default function Footer() {
 
         {/* Main CTA */}
         <div style={{ textAlign: 'center', marginBottom: '5rem' }}>
-          <span className="badge" style={{ marginBottom: '1.5rem' }}>Let's Connect</span>
+          <span className="badge" style={{ marginBottom: '1.5rem' }}>Let&apos;s Connect</span>
 
           <h2 style={{
             fontSize:      'clamp(2.2rem, 5vw, 4.5rem)',
@@ -24,7 +24,7 @@ export default function Footer() {
             lineHeight:    1.1,
             marginBottom:  '2rem',
           }}>
-            Let's Build Something<br />
+            Let&apos;s Build Something<br />
             <span style={{ color: 'var(--accent-dark)' }}>Extraordinary.</span>
           </h2>
 

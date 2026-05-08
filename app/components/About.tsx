@@ -64,7 +64,7 @@ export default function About() {
 
             <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem', marginBottom: '2rem' }}>
               {[
-                "I'm a Junior software engineer dedicated to building high-fidelity digital experiences. With a background spanning both design and computer science, I bridge the gap between creative vision and technical execution.",
+                "I&apos;m a Junior software engineer dedicated to building high-fidelity digital experiences. With a background spanning both design and computer science, I bridge the gap between creative vision and technical execution.",
                 "My approach is rooted in the belief that software should not just be functional — it should be delightful. I craft interactive systems that respond to human intuition with precision and grace.",
               ].map((text, i) => (
                 <p key={i} style={{
@@ -94,7 +94,7 @@ export default function About() {
               paddingLeft: '1.25rem',
             }}>
               <p style={{ fontStyle: 'italic', color: 'var(--ink-muted)', fontSize: '1.1rem' }}>
-                "Architecture begins where engineering ends."
+                &quot;Architecture begins where engineering ends.&quot;
               </p>
               <cite style={{ fontSize: '12px', fontWeight: 700, color: 'var(--ink-muted)', letterSpacing: '0.1em', textTransform: 'uppercase', marginTop: '6px', display: 'block' }}>
                 — Walter Gropius

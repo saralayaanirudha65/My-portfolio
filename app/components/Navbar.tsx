@@ -141,7 +141,7 @@ export default function Navbar() {
               <div style={{ width: '1px', height: '18px', background: 'rgba(16,185,129,0.2)' }} />
 
               <a href="#contact" className="btn-primary" style={{ padding: '8px 20px', fontSize: '13px' }}>
-                Let's Talk
+                Let&apos;s Talk
               </a>
             </nav>
 
@@ -236,7 +236,7 @@ export default function Navbar() {
           className="btn-primary"
           style={{ marginTop: '1rem', padding: '14px 40px', fontSize: '1rem' }}
         >
-          Let's Talk
+          Let&apos;s Talk
         </a>
       </div>
     </>
