@@ -2,21 +2,15 @@
 import React, { useState } from 'react';
 
 /* ─── DATA ───────────────────────────────────────────────── */
-interface EducationItem {
-  degree:      string;
-  institution: string;
-  period:      string;
-  grade?:      string;
-  highlights:  string[];
-}
-
-const EDUCATION: EducationItem[] = [
+const EDUCATION = [
   {
-    degree:      'B.Tech – Computer Communication Engineering',
+    degree: 'B.Tech – Computer Communication Engineering',
     institution: 'Manipal Institute of Technology (MIT Manipal)',
-    period:      '2022 – 2026',
-    highlights:  ['Current Intern at Indivillage Tech Solutions','Project: AI-based Traffic Prediction', 'Coursework: DSA, DBMS, OS, Networks, ML'],
+    period: '2022 – 2026',
+    // grade:       'CGPA: — / 10',            // fill in
+    highlights: ['Current Intern at Indivillage Tech Solutions', 'Project: AI-based Traffic Prediction', 'Coursework: DSA, DBMS, OS, Networks, ML'],
   },
+
 ];
 
 const EXPERIENCE = [
@@ -142,11 +136,9 @@ export default function Resume() {
                     <span style={{ fontSize: '13px', fontWeight: 700, color: 'var(--accent-dark)', letterSpacing: '0.05em' }}>
                       {ed.period}
                     </span>
-                    {ed.grade && (
-                      <span style={{ fontSize: '12px', fontWeight: 600, color: 'var(--ink-muted)', background: 'var(--accent-light)', padding: '2px 10px', borderRadius: '99px' }}>
-                        {ed.grade}
-                      </span>
-                    )}
+                    <span style={{ fontSize: '12px', fontWeight: 600, color: 'var(--ink-muted)', background: 'var(--accent-light)', padding: '2px 10px', borderRadius: '99px' }}>
+                      {ed.grade}
+                    </span>
                   </div>
                   <h4 style={{ fontSize: '1.05rem', fontWeight: 700, color: 'var(--ink)', marginBottom: '0.25rem' }}>
                     {ed.degree}
@@ -156,7 +148,7 @@ export default function Resume() {
                   </p>
                   <ul style={{ display: 'flex', flexDirection: 'column', gap: '4px', listStyle: 'none' }}>
                     {ed.highlights.map((h, j) => (
-                      <li key={j} style={{ display: 'flex', gap: '8px', fontSize: '0.85rem', color: 'var(--ink-muted)' }}>
+                      <li key={j} style={{ display: 'flex', gap: '8px', fontSize: '1rem', color: 'var(--ink-muted)' }}>
                         <span style={{ color: 'var(--accent)', flexShrink: 0 }}>›</span>
                         {h}
                       </li>
@@ -171,7 +163,7 @@ export default function Resume() {
             <div className="glass" style={{ borderRadius: '18px', padding: '1.5rem' }}>
               <ul style={{ display: 'flex', flexDirection: 'column', gap: '0.9rem', listStyle: 'none' }}>
                 {ACHIEVEMENTS.map((a, i) => (
-                  <li key={i} style={{ display: 'flex', gap: '10px', fontSize: '0.9rem', color: 'var(--ink-muted)', lineHeight: 1.6 }}>
+                  <li key={i} style={{ display: 'flex', gap: '10px', fontSize: '1.1rem', color: 'var(--ink-muted)', lineHeight: 1.6 }}>
                     <span style={{
                       width: '20px', height: '20px', borderRadius: '50%',
                       background: 'var(--accent-light)', color: 'var(--accent-dark)',
@@ -208,7 +200,7 @@ export default function Resume() {
                   </p>
                   <ul style={{ display: 'flex', flexDirection: 'column', gap: '4px', listStyle: 'none' }}>
                     {exp.bullets.map((b, j) => (
-                      <li key={j} style={{ display: 'flex', gap: '8px', fontSize: '0.85rem', color: 'var(--ink-muted)' }}>
+                      <li key={j} style={{ display: 'flex', gap: '8px', fontSize: '1rem', color: 'var(--ink-muted)' }}>
                         <span style={{ color: '#0ea5e9', flexShrink: 0 }}>›</span>
                         {b}
                       </li>
@@ -241,7 +233,7 @@ export default function Resume() {
                   </div>
                   <div style={{ flex: 1 }}>
                     <p style={{ fontSize: '0.9rem', fontWeight: 700, color: 'var(--ink)' }}>{cert.name}</p>
-                    <p style={{ fontSize: '0.78rem', color: 'var(--ink-muted)' }}>{cert.issuer} · {cert.year}</p>
+                    <p style={{ fontSize: '0.95rem', color: 'var(--ink-muted)' }}>{cert.issuer} · {cert.year}</p>
                   </div>
                 </div>
               ))}
