@@ -1,6 +1,6 @@
 "use client";
 import React from 'react';
-
+import Image from 'next/image';
 const tags = ['Software Engineering', 'AIML', 'Full stack Engineering', 'Open Source'];
 
 export default function About() {
@@ -30,15 +30,15 @@ export default function About() {
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
+                overflow: 'hidden',
+                position: 'relative'
               }}>
-                <svg width="100" height="100" viewBox="0 0 24 24" fill="none"
-                  stroke="var(--accent-dark)" strokeWidth="0.6"
-                  strokeLinecap="round" strokeLinejoin="round"
-                  style={{ opacity: 0.5 }}
-                >
-                  <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
-                  <circle cx="12" cy="7" r="4" />
-                </svg>
+                <Image 
+                  src="/Images/aniii.png" 
+                  alt="Profile" 
+                  fill
+                  style={{ objectFit: 'cover' }}
+                />
               </div>
             </div>
 
@@ -68,8 +68,8 @@ export default function About() {
                 "My approach is rooted in the belief that software should not just be functional — it should be delightful. I craft interactive systems that respond to human intuition with precision and grace.",
               ].map((text, i) => (
                 <p key={i} style={{
-                  fontSize:   '1.2rem',
-                  color:      'var(--ink-muted)',
+                  fontSize: '1.2rem',
+                  color: 'var(--ink-muted)',
                   lineHeight: 1.75,
                   fontWeight: 400,
                 }}>{text}</p>

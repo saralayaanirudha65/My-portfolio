@@ -66,13 +66,13 @@ export default function Hero() {
 
         {/* Subheadline */}
         <p style={{
-          fontSize:     'clamp(1.15rem, 2.2vw, 1.4rem)',
-          color:        'var(--ink-muted)',
-          maxWidth:     '640px',
+          fontSize: 'clamp(1.15rem, 2.2vw, 1.4rem)',
+          color: 'var(--ink-muted)',
+          maxWidth: '640px',
           marginInline: 'auto',
           marginBottom: '2.75rem',
-          lineHeight:   1.7,
-          fontWeight:   400,
+          lineHeight: 1.7,
+          fontWeight: 400,
         }}>
           2026 Btech Computer Communication Engineering Graduate from MIT Manipal, Aspiring Software Engineer.
         </p>

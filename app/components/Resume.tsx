@@ -136,9 +136,9 @@ export default function Resume() {
                     <span style={{ fontSize: '13px', fontWeight: 700, color: 'var(--accent-dark)', letterSpacing: '0.05em' }}>
                       {ed.period}
                     </span>
-                    <span style={{ fontSize: '12px', fontWeight: 600, color: 'var(--ink-muted)', background: 'var(--accent-light)', padding: '2px 10px', borderRadius: '99px' }}>
+                    {/* <span style={{ fontSize: '12px', fontWeight: 600, color: 'var(--ink-muted)', background: 'var(--accent-light)', padding: '2px 10px', borderRadius: '99px' }}>
                       {ed.grade}
-                    </span>
+                    </span> */}
                   </div>
                   <h4 style={{ fontSize: '1.05rem', fontWeight: 700, color: 'var(--ink)', marginBottom: '0.25rem' }}>
                     {ed.degree}

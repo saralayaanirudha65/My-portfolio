@@ -7,7 +7,7 @@ const PROJECTS = [
     category: 'AIML Project',
     desc: 'Real-time traffic prediction using deep learning and geospatial data. Built with Python, TensorFlow, and OpenCV.',
     accent: '#10b981',
-    img: 'https://images.unsplash.com/photo-1494412651409-8963ce7935a7?auto=format&fit=crop&q=80&w=900',
+    img: 'https://img.magnific.com/premium-photo/aipowered-traffic-prediction-systems-that-optimize-routes-realtime-navigation-systems-that-predict-traffic-jams-adjust-routes-save-time-fuel_1230253-29838.jpg',
     link: 'https://github.com/saralayaanirudha65/traffic_predicition',
   },
 
